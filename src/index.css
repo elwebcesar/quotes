@@ -1,0 +1,202 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* {
+  margin:0 ;
+}
+html {
+  height: 100%;
+}
+body {
+  color: #FFF;
+  font-family: 'Rokkitt', 'Times New Roman', Times, serif;
+  font-weight: 400;
+  background-color: #000;
+}
+
+.txt_right {
+  text-align: right !important;
+}
+
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.header h1{
+  margin: 0 0 30px 0;
+  line-height: 3rem;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.quote {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.quote .quote__content {
+  padding: 20px 30px;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+.quote h2 {
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 1.6rem;
+}
+
+
+.quote p {
+  font-weight: 900;
+  margin: 20px 40px 40px 40px;
+  text-align: left;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.quote button {
+  padding: 12px 30px 10px 30px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFF;
+  cursor: pointer;
+  background-color: #921010;
+  border: none;
+  border-radius: 12px;
+  transition: all .3s ease;
+}
+.quote button:hover {
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #570707;
+}
+
+
+.series {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: space-evenly;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.series article {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 50%;
+  background-size: cover;
+}
+
+.series article.breaking {
+  background-image: url(./assests/img/breaking-bad.jpg);
+  background-position: right center;
+}
+
+.series article.better {
+  background-image: url(./assests/img/better-call-saul.jpg);
+  background-position: center center;
+}
+
+.series article img {
+  padding-bottom: 60px;
+  max-width: 94%;
+  max-height: 180px;
+}
+
+.series article span {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.series article.active span {
+  opacity: 0;
+}
+
+@media (max-width:600px) {
+  .series article {
+    /* display: none; */
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+    /* transition: visibility 0s, opacity 0.5s linear; */
+  }
+
+  .series article.active {
+    /* display: flex; */
+    visibility: visible;
+    opacity: 1;
+    height: 100vh;
+  }
+
+  .quote p {
+    text-align: center !important;
+  }
+}
+
+@media (max-width:400px) {
+  .header {
+    font-size: 1.2rem;
+  }
+
+  .header h1 {
+    line-height: 2rem;
+  }
+
+  .quote p {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width:340px) {
+  .header h1 {
+    margin-bottom: 10px;
+  }
+
+  .quote p {
+    margin-top: 10px;
+  }
+}
+
+@media (max-height: 800px) {
+  .content {
+    top: 30px;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+  }
+}
+
+@media (max-height: 620px) {
+  .series article img {
+    padding-bottom: 10px;
+    max-height: 120px;
+  }
+}
