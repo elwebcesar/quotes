@@ -68,7 +68,7 @@ const About = ({images}) => {
             <a rel="noopener noreferrer" href="https://www.figma.com/proto/P2JASV55Pj9GfYaOQNnsZi/Quotes?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1" title={icoFigma.title} target="_blank">
                 <img src={icoFigma.url} alt={icoFigma.title} />
             </a>
-            <a rel="noopener noreferrer" href="githu.com" title={icoGitHub.title} target="_blank">
+            <a rel="noopener noreferrer" href="https://github.com/elwebcesar/quotes" title={icoGitHub.title} target="_blank">
                 <img src={icoGitHub.url} alt={icoGitHub.title} />
             </a>
             <a rel="noopener noreferrer" href="https://breakingbadapi.com/" title={icoApi.title} target="_blank">
