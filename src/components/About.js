@@ -2,19 +2,24 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 // styled components
+const sizes = {
+    break: '600px',
+}
+
 const InfoContent = styled.aside`
     position: absolute;
+    position: relative;
     display: flex;
-    right: -188px;
-    bottom: 15px;
+    left: calc(100% - 70px);
+    bottom: 80px;
     padding: 6px 20px 6px 6px;
-    /* gap: 14px; */
+    width: 245px;
     background-color: #921010;
     border-radius: 40px 0 0 40px;
-    transition: right .3s ease;
+    transition: left .3s ease;
 
     &.active {
-        right: 0;
+        left: calc(100% - 245px);
     }
 
     & button {
