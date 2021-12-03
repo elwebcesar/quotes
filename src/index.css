@@ -1,20 +1,29 @@
-html {
-  box-sizing: border-box;
-}
 *, *:before, *:after {
   box-sizing: inherit;
 }
 * {
   margin:0 ;
 }
+
 html {
-  height: 100%;
+  box-sizing: border-box;
 }
+
 body {
   color: #FFF;
   font-family: 'Rokkitt', 'Times New Roman', Times, serif;
   font-weight: 400;
   background-color: #000;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+main, .series {
+  height: 100%;
 }
 
 .txt_right {
@@ -94,11 +103,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 100vh;
   justify-content: space-evenly;
-
-  position: relative;
-  overflow: hidden;
 }
 
 .series article {
@@ -121,7 +126,8 @@ body {
 }
 
 .series article img {
-  padding-bottom: 60px;
+  position: absolute;
+  bottom: 100px;
   max-width: 94%;
   max-height: 180px;
 }
